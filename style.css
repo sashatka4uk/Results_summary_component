@@ -1,0 +1,342 @@
+/* Global */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*********************/
+/* Fonts */
+/*********************/
+.hanken-medium {
+  font-family: "Hanken Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.hanken-bold {
+  font-family: "Hanken Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.hanken-ebold {
+  font-family: "Hanken Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+/*********************/
+/* Section Result */
+/*********************/
+
+.result {
+  max-width: 100%;
+  padding: 24px 58px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #7755ff 0%, #6943ff 0.01%, #2f2ce9 100%);
+  box-shadow: 0px 30px 60px rgba(61, 108, 236, 0.15);
+  border-radius: 0px 0px 32px 32px;
+}
+
+.result__subtext {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 23px;
+  color: #cac9ff;
+  margin-bottom: 24px;
+}
+
+.result__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    #4d21c9 0%,
+    rgba(37, 33, 201, 0) 100%,
+    rgba(37, 33, 201, 0) 100%
+  );
+  margin-bottom: 24px;
+}
+
+.result__score {
+  font-size: 56px;
+  line-height: 72px;
+  color: #ffffff;
+}
+
+.result__of {
+  font-size: 16px;
+  line-height: 21px;
+  color: #cac9ff;
+  mix-blend-mode: normal;
+  opacity: 0.52;
+}
+
+.result__heading {
+  font-size: 24px;
+  line-height: 31px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.result__text {
+  font-size: 16px;
+  line-height: 21px;
+  color: #cac9ff;
+}
+/*********************/
+/* Section Summary */
+/*********************/
+
+.summary {
+  padding: 24px 30px 30px;
+}
+
+.summary__heading {
+  font-size: 18px;
+  line-height: 23px;
+  color: #303b59;
+  margin-bottom: 24px;
+}
+
+.summary__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px;
+}
+
+.summary__type {
+  position: relative;
+  margin-left: 32px;
+}
+/*********************/
+/* Atribute class  */
+/* Here i put same parameters for summary__type */
+/*********************/
+[class*="summary__type--"] {
+  border-radius: 12px;
+}
+
+[class*="summary__type--"] .summary__type {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+[class*="summary__type--"] .summary__score {
+  color: #303b59;
+}
+[class*="summary__type--"] .summary__score span {
+  opacity: 0.5;
+}
+[class*="summary__type--"] .summary__type::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -32px;
+}
+/*********************/
+/* Reaction Info */
+/*********************/
+.summary__type--reaction {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    #ff5555;
+}
+.summary__type--reaction .summary__type::before {
+  background: url(images/icon-reaction.svg);
+}
+.summary__type--reaction .summary__type {
+  color: #ff5555;
+}
+/*********************/
+/* Memory Info */
+/*********************/
+.summary__type--memory {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    #ffb21e;
+}
+
+.summary__type--memory .summary__type {
+  color: #ffb21e;
+}
+.summary__type--memory .summary__type::before {
+  background: url(images/icon-memory.svg);
+}
+/*********************/
+/* Verbal Info */
+/*********************/
+.summary__type--verbal {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    #00bb8f;
+}
+
+.summary__type--verbal .summary__type {
+  color: #00bb8f;
+}
+
+.summary__type--verbal .summary__type::before {
+  background: url(images/icon-verbal.svg);
+}
+/*********************/
+/* Visual Info */
+/*********************/
+.summary__type--visual {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    #1125d6;
+}
+
+.summary__type--visual .summary__type {
+  color: #1125d6;
+}
+
+.summary__type--visual .summary__type::before {
+  background: url(images/icon-visual.svg);
+}
+
+.summary__btn {
+  display: block;
+  padding: 17px 120px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+  background: #303b59;
+  border-radius: 128px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.summary__btn:hover {
+  background: linear-gradient(180deg, #7755ff 0%, #6943ff 0.01%, #2f2ce9 100%);
+}
+
+@media (min-width: 778px) {
+  body {
+    background: #ecf2ff;
+  }
+  main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 32px;
+  }
+  /*********************/
+  /* Section Result */
+  /*********************/
+  .result {
+    align-items: center;
+    justify-content: center;
+    width: 368px;
+    height: 512px;
+    border-radius: 32px;
+    padding: 38px 54px 46px;
+  }
+
+  .result__subtext {
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .result__box {
+    width: 200px;
+    height: 200px;
+    row-gap: 4px;
+    margin-bottom: 28px;
+  }
+  .result__score {
+    font-size: 72px;
+    line-height: 72px;
+  }
+  .result__of {
+    font-size: 18px;
+    line-height: 23px;
+    mix-blend-mode: normal;
+    opacity: 0.52;
+  }
+
+  .result__heading {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 14px;
+  }
+
+  .result__text {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  /*********************/
+  /* Section Summary */
+  /*********************/
+  .summary {
+    padding: 38px 40px 46px;
+  }
+
+  .summary__heading {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 28px;
+  }
+
+  [class*="summary__type--"] .summary__type {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  [class*="summary__type--"] .summary__type::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -32px;
+  }
+  .summary__list {
+    margin-bottom: 41px;
+  }
+  .summary__btn {
+    padding: 17px 106px;
+  }
+}

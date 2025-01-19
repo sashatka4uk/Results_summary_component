@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <section class="result">
+          <span class="result__subtext hanken-bold">Your Result</span>
+          <div class="result__box">
+            <h3 class="result__score hanken-ebold">76</h3>
+            <span class="result__of hanken-bold">of 100</span>
+          </div>
+          <div class="result__description">
+            <h2 class="result__heading hanken-bold">Great</h2>
+            <p class="result__text hanken-medium">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+        </section>
+        <section class="summary">
+          <h1 class="summary__heading hanken-bold">Summary</h1>
+          <ul class="summary__list">
+            <li class="summary__item summary__type--reaction">
+              <p class="summary__type hanken-medium">Reaction</p>
+              <p class="summary__score hanken-bold">80<span> / 100</span></p>
+            </li>
+            <li class="summary__item summary__type--memory">
+              <p class="summary__type hanken-medium">Memory</p>
+              <p class="summary__score hanken-bold">92<span> / 100</span></p>
+            </li>
+            <li class="summary__item summary__type--verbal">
+              <p class="summary__type hanken-medium">Verbal</p>
+              <p class="summary__score hanken-bold">61<span> / 100</span></p>
+            </li>
+            <li class="summary__item summary__type--visual">
+              <p class="summary__type hanken-medium">Visual</p>
+              <p class="summary__score hanken-bold">72<span> / 100</span></p>
+            </li>
+          </ul>
+          <a href="#" class="summary__btn hanken-bold">Continue</a>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
