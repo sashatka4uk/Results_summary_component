@@ -144,6 +144,8 @@
   color: #303b59;
 }
 [class*="summary__type--"] .summary__score span {
+  display: inline-block;
+  margin-left: 8px;
   opacity: 0.5;
 }
 [class*="summary__type--"] .summary__type::before {
